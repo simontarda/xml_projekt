@@ -1,0 +1,139 @@
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"/>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"/>
+
+<script>
+    function demoFromHTML() {
+        var pdf = new jsPDF('p', 'pt', 'letter');
+        // source can be HTML-formatted string, or a reference
+        // to an actual DOM element from which the text will be scraped.
+        source = $('#content')[0];
+
+        // we support special element handlers. Register them with jQuery-style 
+        // ID selector for either ID or node name. ("#iAmID", "div", "span" etc.)
+        // There is no support for any other type of selectors 
+        // (class, of compound) at this time.
+        specialElementHandlers = {
+            // element with id of "bypass" - jQuery style selector
+            '#bypassme': function (element, renderer) {
+                // true = "handled elsewhere, bypass text extraction"
+                return true
+            }
+        };
+        margins = {
+            top: 0,
+            bottom: 0,
+            left: 20,
+            width: 1
+        };
+        // all coords and widths are in jsPDF instance's declared units
+        // 'inches' in this case
+        pdf.fromHTML(
+            source, // HTML string or DOM elem ref.
+            margins.left, // x coord
+            margins.top, { // y coord
+                'width': margins.width, // max width of content on PDF
+                'elementHandlers': specialElementHandlers
+            },
+
+            function (dispose) {
+                // dispose: object with X, Y of the last line add to the PDF 
+                //          this allow the insertion of new lines after html
+                pdf.save('Test.pdf');
+            }, margins
+        );
+    }
+    
+    function myFunction() {
+        var sPageURL = window.location.search.substring(1);
+        console.log(sPageURL);
+        var sParameterName = sPageURL.split('=');
+        var URL = "";
+        console.log(sParameterName);
+        document.getElementById("id1").value = sParameterName[0];
+        document.getElementById("id2").value = sParameterName[1];
+        if(sParameterName[0]=="name"){
+            URL = "./hello.xql?"+sParameterName[0]+"="+sParameterName[1];
+            window.open(URL);
+        }else if(sParameterName[0]=="name2"){
+            URL = "./hello2.xql?"+sParameterName[0]+"="+sParameterName[1];
+            window.open(URL);
+        }else{
+            alert("Brak danych do raportu");
+        }
+        
+    }
+</script>
+</head>
+<body>
+<div class="templates:surround?with=templates/page.html&amp;at=content">
+    <table>
+    <tr>
+    <td>
+    <form action="">
+        <label for="name">Typ:</label>
+        <br/>
+          <input name="name" type="text" list="typ"/>
+            <datalist id="typ">
+                <option>Województwo</option>
+                <option>Powiat</option>
+                <option>Gmina</option>
+            </datalist>
+    </form>
+    </td>
+    <td>
+     <form action="">
+        <label for="name2">Jednostka nadrzędna:</label>
+        <br/>
+          <input name="name2" type="text" list="jednostka"/>
+            <datalist id="jednostka">
+                <option>Wielkoposlkie</option>
+                <option>Poznański</option>
+                <option>Małopolskie</option>
+                <option>Brzeski</option>
+                <option>Podkarpackie</option>
+                <option>Jasielski</option>
+                <option>Lubuskie</option>
+                <option>Wschowski</option>
+                <option>Mazowieckie</option>
+                <option>Warszawa</option>
+            </datalist>
+    </form>
+    </td>
+     <button onclick="javascript:myFunction()">RAPORT</button>
+    <td/>
+     <td>
+       <form action="">
+        <label for="amount">Graf:</label>
+        <br/>
+          <input name="amount" type="number" min="0"/>
+        </form>
+     </td>
+    </tr>
+     </table>
+    <table border="3">
+        <tr>
+            <th>Podrzędne</th>
+            <th>TYP</th>
+            <th>NAZWA</th>
+            <th>LUDNOSC</th>
+            <th>WYSOKOSC_MIN</th>
+            <th>WYSOKOSC_MAX</th>
+        </tr>
+    <div id="content" class="app:sortWoj"/>
+    <div id="content" class="app:sortJednostka"/>
+    </table>
+    <div>
+            <div class="app:showTESTGraph"/>
+    </div>
+</div>
+<input id="id1" name="test"/>
+<input id="id2" name="test2"/>
+
+
+</body>
+</html>

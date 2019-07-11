@@ -1,0 +1,92 @@
+<POLSKA>
+    <JED_ADM TYP="Województwo"> 
+        <NAZWA>Wielkoposlkie</NAZWA> 
+        <LUDNOSC>52000</LUDNOSC>
+        <WYSOKOSC_MIN>21</WYSOKOSC_MIN>
+        <WYSOKOSC_MAX>600</WYSOKOSC_MAX>
+        <JED_ADM TYP="Powiat"> 
+            <NAZWA>Poznański</NAZWA> 
+            <LUDNOSC>450000</LUDNOSC>
+            <WYSOKOSC_MIN>120</WYSOKOSC_MIN>
+            <WYSOKOSC_MAX>200</WYSOKOSC_MAX>
+            <JED_ADM TYP="Gmina">
+                <NAZWA>Swarzędz</NAZWA> 
+                <LUDNOSC>9000</LUDNOSC>
+                <WYSOKOSC_MIN>33</WYSOKOSC_MIN>
+                <WYSOKOSC_MAX>250</WYSOKOSC_MAX>
+            </JED_ADM>
+        </JED_ADM>    
+    </JED_ADM>
+    <JED_ADM TYP="Województwo"> 
+        <NAZWA>Małopolskie</NAZWA> 
+        <LUDNOSC>52000</LUDNOSC>
+        <WYSOKOSC_MIN>50</WYSOKOSC_MIN>
+        <WYSOKOSC_MAX>150</WYSOKOSC_MAX>
+        <JED_ADM TYP="Powiat">
+            <NAZWA>Brzeski</NAZWA> 
+            <LUDNOSC>7000</LUDNOSC>
+            <WYSOKOSC_MIN>20</WYSOKOSC_MIN>
+            <WYSOKOSC_MAX>120</WYSOKOSC_MAX>
+            <JED_ADM TYP="Gmina">
+                <NAZWA>Brzesko</NAZWA> 
+                <LUDNOSC>7000</LUDNOSC>
+                <WYSOKOSC_MIN>60</WYSOKOSC_MIN>
+                <WYSOKOSC_MAX>90</WYSOKOSC_MAX>
+            </JED_ADM>
+        </JED_ADM>
+    </JED_ADM>
+    <JED_ADM TYP="Województwo"> 
+        <NAZWA>Podkarpackie</NAZWA> 
+        <LUDNOSC>25000</LUDNOSC>
+        <WYSOKOSC_MIN>150</WYSOKOSC_MIN>
+        <WYSOKOSC_MAX>2300</WYSOKOSC_MAX>
+        <JED_ADM TYP="Powiat">
+            <NAZWA>Jasielski</NAZWA> 
+            <LUDNOSC>9000</LUDNOSC>
+            <WYSOKOSC_MIN>300</WYSOKOSC_MIN>
+            <WYSOKOSC_MAX>995</WYSOKOSC_MAX>
+            <JED_ADM TYP="Gmina">
+                <NAZWA>Jasło</NAZWA> 
+                <LUDNOSC>3000</LUDNOSC>
+                <WYSOKOSC_MIN>350</WYSOKOSC_MIN>
+                <WYSOKOSC_MAX>800</WYSOKOSC_MAX>
+            </JED_ADM>
+        </JED_ADM>
+    </JED_ADM> 
+    <JED_ADM TYP="Gmina"> 
+        <NAZWA>Lubuskie</NAZWA> 
+        <LUDNOSC>48000</LUDNOSC>
+        <WYSOKOSC_MIN>190</WYSOKOSC_MIN>
+        <WYSOKOSC_MAX>320</WYSOKOSC_MAX>
+        <JED_ADM TYP="Powiat">
+            <NAZWA>Wschowski</NAZWA> 
+            <LUDNOSC>9500</LUDNOSC>
+            <WYSOKOSC_MIN>165</WYSOKOSC_MIN>
+            <WYSOKOSC_MAX>250</WYSOKOSC_MAX>
+            <JED_ADM TYP="Gmina">
+                <NAZWA>Wschowa</NAZWA> 
+                <LUDNOSC>1200</LUDNOSC>
+                <WYSOKOSC_MIN>41</WYSOKOSC_MIN>
+                <WYSOKOSC_MAX>120</WYSOKOSC_MAX>
+            </JED_ADM>
+        </JED_ADM>
+    </JED_ADM>    
+    <JED_ADM TYP="Województwo"> 
+        <NAZWA>Mazowieckie</NAZWA> 
+        <LUDNOSC>12500000</LUDNOSC>
+        <WYSOKOSC_MIN>100</WYSOKOSC_MIN>
+        <WYSOKOSC_MAX>250</WYSOKOSC_MAX>
+        <JED_ADM TYP="Powiat">
+            <NAZWA>Warszawa</NAZWA> 
+            <LUDNOSC>18000000</LUDNOSC>
+            <WYSOKOSC_MIN>120</WYSOKOSC_MIN>
+            <WYSOKOSC_MAX>150</WYSOKOSC_MAX>
+            <JED_ADM TYP="Gmina">
+                <NAZWA>Warszawa</NAZWA> 
+                <LUDNOSC>17000000</LUDNOSC>
+                <WYSOKOSC_MIN>125</WYSOKOSC_MIN>
+                <WYSOKOSC_MAX>130</WYSOKOSC_MAX>
+            </JED_ADM>
+        </JED_ADM>
+    </JED_ADM>    
+</POLSKA>
